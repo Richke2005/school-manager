@@ -1,0 +1,24 @@
+.login-content{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-form-header{
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#form-content{
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}

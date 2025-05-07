@@ -1,0 +1,291 @@
+[
+    {
+        "model": "school_site.address",
+        "pk": 1,
+        "fields": {
+            "state": "SP",
+            "city": "São Paulo",
+            "street": "Rua das Flores",
+            "number": 100,
+            "neighborhood": "Centro",
+            "complement": "Apto 201",
+            "cep": "01010-000"
+        }
+    },
+    {
+        "model": "school_site.discipline",
+        "pk": 1,
+        "fields": {
+            "name": "Matemática",
+            "desc": "Estudo de Álgebra e Geometria",
+            "period": "Segunda e Quarta - 19h às 21h",
+            "status": true
+        }
+    },
+    {
+        "model": "school_site.auth_user",
+        "pk": 1,
+        "fields": {
+            "username": "Professor1209",
+            "first_name": "João",
+            "last_name": "Silva",
+            "email": "richardke18@gmail.com",
+            "password": "Kendj927",
+            "rg": "12345678",
+            "cpf": "12345678901",
+            "phone_number": "11987654321",
+            "address": 1
+        }
+    },
+    {
+        "model": "school_site.class",
+        "pk": 1,
+        "fields": {
+            "available_vacancies": 30,
+            "name": "Turma A",
+            "class_code": "A123"
+        }
+    },
+    {
+        "model": "school_site.student",
+        "pk": 1,
+        "fields": {
+            "first_name": "João",
+            "last_name": "Da Silva",
+            "email": "joao.silva@example.com",
+            "password": "senha123",
+            "rg": "87654321",
+            "cpf": "98765432100",
+            "phone_number": "11999998888",
+            "registration_date": "2024-01-10T00:00:00Z",
+            "date_of_birth": "2005-06-15",
+            "status": true,
+            "address": 1,
+            "student_class": 1
+        }
+    },
+    {
+        "model": "school_site.studentdiscipline",
+        "pk": 1,
+        "fields": {
+            "student": 1,
+            "discipline": 1,
+            "registration_date": "2024-02-01",
+            "final_note": 8.5,
+            "frequency": "90%",
+            "status": "Aprovado"
+        }
+    },
+    {
+        "model": "school_site.absence",
+        "pk": 1,
+        "fields": {
+            "student": 1,
+            "absence_date": "2024-03-10T10:00:00Z",
+            "discipline": 1,
+            "justification": null,
+            "absence_status": "Justificado",
+            "is_present": false
+        }
+    },
+    {
+        "model": "school_site.absence",
+        "pk": 2,
+        "fields": {
+            "student": 2,
+            "absence_date": "2024-03-10T10:00:00Z",
+            "discipline": 1,
+            "justification": null,
+            "absence_status": "Justificado",
+            "is_present": false
+        }
+    },
+    {
+        "model": "school_site.justification",
+        "pk": 1,
+        "fields": {
+            "submission_date": "2024-03-11T12:00:00Z",
+            "desc": "Atestado médico",
+            "document": null,
+            "approval_status": "Aprovado",
+            "observation": "Apresentou atestado válido"
+        }
+    },
+    {
+        "model": "school_site.classdiary",
+        "pk": 1,
+        "fields": {
+            "title": "Aula de Matemática",
+            "description": "Introdução à Álgebra",
+            "release_date": "2024-02-15",
+            "discipline": 2,
+            "employee_class": 1
+        }
+    },
+    {
+        "model": "school_site.address",
+        "pk": 2,
+        "fields": {
+            "state": "SP",
+            "city": "São Paulo",
+            "street": "Rua Mongi Mirim",
+            "number": 100,
+            "neighborhood": "Centro",
+            "complement": "Apto 201",
+            "cep": "01010-000"
+        }
+    },
+    {
+        "model": "school_site.discipline",
+        "pk": 2,
+        "fields": {
+            "name": "Português",
+            "desc": "Curso básico de Português",
+            "period": "Noturno",
+            "status": true
+        }
+    },
+    {
+        "model": "school_site.discipline",
+        "pk": 3,
+        "fields": {
+            "name": "Física",
+            "desc": "Curso básico de Física",
+            "period": "Noturno",
+            "status": true
+        }
+    },
+    {
+        "model": "school_site.auth_user",
+        "pk": 2,
+        "fields": {
+            "username": "Professor3",
+            "first_name": "Ailtom",
+            "last_name": "Silva",
+            "email": "professor1@example.com",
+            "password": "senha123",
+            "rg": "12345678",
+            "cpf": "12345678763",
+            "phone_number": "11987654321",
+            "address": 1
+        }
+    },
+    {
+        "model": "school_site.class",
+        "pk": 2,
+        "fields": {
+            "available_vacancies": 30,
+            "name": "Turma B",
+            "class_code": "B123"
+        }
+    },
+    {
+        "model": "school_site.class",
+        "pk": 2,
+        "fields": {
+            "available_vacancies": 30,
+            "name": "Turma C",
+            "class_code": "C123"
+        }
+    },
+    {
+        "model": "school_site.student",
+        "pk": 2,
+        "fields": {
+            "first_name": "João",
+            "last_name": "Guilherme",
+            "email": "joao.silva@example.com",
+            "password": "senha123",
+            "rg": "87654321",
+            "cpf": "98765433947",
+            "phone_number": "11999998888",
+            "registration_date": "2024-01-10T00:00:00Z",
+            "date_of_birth": "2005-06-15",
+            "status": true,
+            "address": 2,
+            "student_class": 2
+        }
+    },
+    {
+        "model": "school_site.studentdiscipline",
+        "pk": 1,
+        "fields": {
+            "student": 2,
+            "discipline": 1,
+            "registration_date": "2024-02-01",
+            "final_note": 8.5,
+            "frequency": "90%",
+            "status": "Aprovado"
+        }
+    },
+    {
+        "model": "school_site.absence",
+        "pk": 3,
+        "fields": {
+            "student": 1,
+            "absence_date": "2024-03-10T10:00:00Z",
+            "discipline": 1,
+            "justification": 1,
+            "absence_status": "Justificado"
+        }
+    },
+    {
+        "model": "school_site.justification",
+        "pk": 1,
+        "fields": {
+            "submission_date": "2024-03-11T12:00:00Z",
+            "desc": "Atestado médico",
+            "document": null,
+            "approval_status": "Aprovado",
+            "observation": "Apresentou atestado válido"
+        }
+    },
+    {
+        "model": "school_site.classdiary",
+        "pk": 2,
+        "fields": {
+            "title": "Aula de Matemática",
+            "description": "Continuação da Álgebra",
+            "release_date": "2024-02-16",
+            "discipline": 1,
+            "employee_class": 1
+        }
+    },
+
+    {
+        "model": "school_site.user_discipline",
+        "pk": 1,
+        "fields": {
+            "duration": "40h",
+            "user_id": 1,
+            "discipline_id": 1
+        }
+    },
+
+    {
+        "model": "school_site.user_discipline",
+        "pk": 2,
+        "fields": {
+            "duration": "30",
+            "user_id": 1,
+            "discipline_id": 2
+        }
+    },
+
+    {
+        "model": "school_site.employeeclass",
+        "pk": 1,
+        "fields": {
+            "employee_id": 1,
+            "classe_id": 1
+        }
+    },
+    {
+        "model": "school_site.employeeclass",
+        "pk": 2,
+        "fields": {
+            "employee_id": 3,
+            "classe_id": 1
+        }
+    }
+]

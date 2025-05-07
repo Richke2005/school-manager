@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/globalStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/disciplines.css' %}">
+    <title>Disciplines</title>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <div style="width: 3%; height: 3%; display: flex; align-items: center;">
+            <a href="{% url 'home' %}" class="navbar-brand">
+              <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+            </a>
+          </div>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">EMEB Drummond</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Gestão
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="">Alunos</a></li>
+                    <li><a class="dropdown-item" href="{% url 'user_management' %}">Funcionários</a></li>
+                    <li><a class="dropdown-item" href="#">Disciplinas</a></li>
+                    <li><a class="dropdown-item" href="#">Turmas</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <section class="section-title">
+        <h2>📘 Minhas Disciplinas</h2>
+    </section>
+
+    <div style="display: flex; flex-direction: column; justify-content: space-around;">
+        {% for discipline in data %}
+        <div class="card" style="padding: 10px; margin: 20px; cursor: pointer;" id="{{discipline.id}}">
+            <div style="display: flex;">
+                <div style="position: relative;">
+                    <img src="{% static 'images/discipline_book.svg' %}" class="card-img-top" style="width: 50px;" alt="book-icon">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" style="font-weight: bold; color: rgb(50, 121, 252);">{{discipline.name}}</h3>
+                    <div>                  
+                        <p class="card-text">{{discipline.period}}</p>
+                        <p class="card-text">{{discipline.desc}}</p>
+                    </div>
+                    <div>
+                      <a href="{% url 'discipline_presence' discipline.id %}" class="btn btn-success" style="margin-right: 10px;">Lançar Presença</a>
+                      <a href="{% url 'discipline_detail' discipline.id %}" class="btn btn-secondary" style="margin-right: 10px;">Ver Detalhes</a>
+                      <a class="btn btn-primary" style="margin-right: 10px;">Lançar Notas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.id;
+                window.location.href = `/disciplines/${id}/detail`;
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

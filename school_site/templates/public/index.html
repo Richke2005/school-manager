@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/globalStyle.css' %}">
+  <link rel="stylesheet" href="{% static 'css/landingPage.css' %}">
+  <title>EMEB drummond | Bem-vindo</title>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="Logo da EMEB Drummond" style="width: 100%; height: 100%; border-radius: 50%;">
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Cursos</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="{% url 'login' %}" class="btn btn-outline-light">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+  <main class="align-container">
+    <div class="collum-texts">
+      <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: bold;">
+        Bem-vindo ao sistema de gestão escolar
+      </h1>
+      <h5 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        Simplifique a administração da sua escola com nosso sistema de gestão.
+      </h5>
+      <button type="button" style="color: white;" class="btn btn-danger" id="saiba-mais" onclick="scrollToSection()">Saiba Mais</button>
+      <script>
+        // Função para rolar suavemente até a seção "Sobre"
+        function scrollToSection() {
+          const section = document.querySelector('#about-section');
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      </script>
+    </div>
+
+    <div style="position: absolute; width: 50%; right: 0px; bottom: 0px;">
+      <img src="{% static 'images/teacher.png' %}" alt="pessoa pesquisando no computador" style="width: 100%; height: 100%;">
+    </div>
+  </main>
+
+  <section id="about-section" style="padding-top: 30px;">
+    <div class="container">
+        <div class="col text-left">
+          <h1> Sobre a EMEB Drummond</h1>
+        </div>
+    </div>
+  </section>
+
+  <div class="about-container">
+    <div class="new-section">
+      <p>
+        A EMEB Drummond é uma escola pública localizada em São Paulo, Brasil. Oferecemos educação de qualidade para crianças e adolescentes, com foco no desenvolvimento integral dos alunos. Nossa equipe de professores é altamente qualificada e dedicada a proporcionar um ambiente de aprendizado estimulante e inclusivo.
+      </p>
+      <p>
+        Nossa missão é formar cidadãos críticos e conscientes, preparados para enfrentar os desafios do mundo contemporâneo. Acreditamos que a educação é a chave para um futuro melhor e trabalhamos diariamente para garantir que nossos alunos tenham acesso a uma formação de excelência.
+      </p>
+      <p>
+        Na EMEB Drummond, valorizamos a diversidade e promovemos a inclusão, respeitando as diferenças e incentivando o respeito mútuo. Oferecemos uma ampla gama de atividades extracurriculares, como esportes, artes e tecnologia, para complementar a formação acadêmica dos nossos alunos.
+      </p>
+      <p>
+        Estamos comprometidos em criar um ambiente seguro e acolhedor, onde todos os alunos possam se sentir à vontade para aprender e crescer. Nossa escola é um espaço de diálogo, respeito e colaboração, onde todos são bem-vindos.
+      </p>
+      <p>
+        Venha conhecer a EMEB Drummond e descubra tudo o que temos a oferecer. Estamos ansiosos para recebê-lo em nossa comunidade escolar!
+      </p>
+    </div>
+  </section>
+
+  <section class="new-section">
+    <h1>
+      Nossos Professores
+    </h1>
+    <div class="card-group">
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/girl-studing.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Diretor(a):</h5>
+          <p class="card-text">Quend Lailane</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/girl-studing.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Diretor(a):</h5>
+          <p class="card-text">Quend Lailane</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/girl-studing.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Diretor(a):</h5>
+          <p class="card-text">Quend Lailane</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/girl-studing.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Diretor(a):</h5>
+          <p class="card-text">Quend Lailane</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        <p>&copy; 2023 EMEB Drummond. Todos os direitos reservados.</p>
+        <p>Desenvolvido com ❤️ por Richard Carvalho Dos Anjos</p>
+      </div>
+  </footer>
+</body>
+</html>

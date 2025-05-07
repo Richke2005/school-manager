@@ -1,0 +1,83 @@
+.header{
+    position: fixed;
+    top: 0px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    transition: top 0.5s ease-in-out; 
+}
+
+.scrolled{
+    position: fixed;
+    top: -12%;
+    background-color: transparent;
+    transition: top 0.10s ease-in-out; 
+    
+}
+
+.header .logo{
+    width: 40px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list li a:hover{
+    color: black;
+}
+
+.align-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    background-color: #071097;
+}
+
+.collum-texts{
+    padding: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: white;
+    gap: 20px
+}
+
+.new-section{
+    padding: 50px;
+    background-color: whitesmoke;
+}
+
+.card-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer{
+    padding: 20px;
+    background-color: #071097;
+    color: white;
+    text-align: center;
+}
